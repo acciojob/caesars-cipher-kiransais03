@@ -10,27 +10,26 @@ const lookup = {
   'Y': 'L','Z': 'M', '?': '?', ',': ','
 };
 
-function rot13(encodedStr){
-   let decodedArr = []; // Your Result goes here
-  // Only change code below this line
-	for(let i=0;i<encodedStr.length;i++)
-		{
-			const char=encodedStr.charAt(i);
-			const decodedChar=lookup.[char];
-			if(lookup.char==undefined)
-			{
-				decodedArr.push(char);
-			}
-			else {
-				decodedArr.push(lookup.char);
-			}
-		}
 
-  return decodedArr;//return decodedArr
+function rot13(encodedStr) {
+  let decodedArr = []; // Your Result goes here
+  // Only change code below this line
+  for (let i = 0; i < encodedStr.length; i++) {
+    const char = encodedStr.charAt(i);
+    const decodedChar = lookup[char];
+    console.log(decodedChar);
+    if (lookup[char] === undefined) {
+      decodedArr.push(char);
+    } else {
+      decodedArr.push(decodedChar);
+    }
+  }
+
+  return decodedArr; //return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
 console.log(rot13("SERR YBIR? NPPVBWBO"));
 
-module.exports = rot13;
+// module.exports = rot13;
